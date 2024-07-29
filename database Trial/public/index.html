@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch Data from MySQL</title>
+</head>
+<body>
+  <h1>Check the Console for Fetched Data</h1>
+  <script>
+    fetch('/api/odds')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Data fetched from MySQL:', data);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  </script>
+</body>
+</html>
